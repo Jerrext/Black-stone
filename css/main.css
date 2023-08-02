@@ -102,25 +102,30 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
 * {
   box-sizing: border-box;
 }
 
 /*--------------------*/
 
-
-
 :root {
   --georgia-font: "Georgia", sans-serif;
   --proxima-font: "Proxima Nova", sans-serif;
   --inter-font: "Inter", sans-serif;
-
   --text-color-white: #FFFFFF;
+  --color: #286A1D;
+  --radius: 5px;
 
   font-size: 16px;
   font-family: var(--proxima-font);
   font-weight: 400;
-  line-height: 1.32em;
   color: #000000;
 }
 
@@ -132,6 +137,37 @@ body {
 .container {
   max-width: 1368px;
   margin: 0 auto;
+}
+
+.btn {
+  border-radius: var(--radius);
+  background-color: var(--color);
+  color: var(--text-color-white);
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 20px 28px;
+}
+
+h1 {
+  font-family: var(--georgia-font);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.1em;
+  width: 12.5em;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2em;
 }
 
 /*-------------------
@@ -146,10 +182,10 @@ body {
   width: 100%;
   z-index: 999;
   height: 165px;
-  background-color: green;
 }
 
-header * {
+.header *,
+.banner * {
   color: var(--text-color-white);
 }
 
@@ -190,11 +226,28 @@ header * {
 }
 
 .header__call-btn {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
   font-size: 22px;
-  padding: 0;
   border-bottom: 1px solid var(--text-color-white);
   align-self: end;
+}
+
+/*-------------------
+--------banner-------
+-------------------*/
+
+.banner {
+ padding: 264px 0 244px;
+ background-image: url("../img/banner-bg.jpg");
+ background-size: cover;
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 85px;
+}
+
+.banner__address {
+  font-size: 30px;
 }
