@@ -68,36 +68,133 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    display: block;
+  display: block;
 }
 html {
-    height: 100%;
+  height: 100%;
 }
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote, q {
-    quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*--------------------*/
+
+
+
+:root {
+  --georgia-font: "Georgia", sans-serif;
+  --proxima-font: "Proxima Nova", sans-serif;
+  --inter-font: "Inter", sans-serif;
+
+  --text-color-white: #FFFFFF;
+
+  font-size: 16px;
+  font-family: var(--proxima-font);
+  font-weight: 400;
+  line-height: 1.32em;
+  color: #000000;
+}
+
+body {
+  background-color: #fff;
+  position: relative;
+}
+
+.container {
+  max-width: 1368px;
+  margin: 0 auto;
+}
+
+/*-------------------
+--------header-------
+-------------------*/
+
+.header {
+  position: absolute;
+  padding-top: 41px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 165px;
+  background-color: green;
+}
+
+header * {
+  color: var(--text-color-white);
+}
+
+.header__wrapper {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 35px;
+  margin-top: 31px;
+}
+
+.header__nav-link {
+  font-size: 18px;
+}
+
+.header__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header__phone-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header__phone-num {
+  font-family: var(--georgia-font);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1em;
+  display: block;
+}
+
+.header__call-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  padding: 0;
+  border-bottom: 1px solid var(--text-color-white);
+  align-self: end;
 }
