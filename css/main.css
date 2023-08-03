@@ -135,6 +135,7 @@ button {
   --bg-color: #F5F5F5;
   --color: #286A1D;
   --radius: 5px;
+  --card-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.25);
 
   font-size: 16px;
   font-family: var(--proxima-font);
@@ -191,6 +192,10 @@ h4 {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2em;
+}
+
+h5 {
+  font-size: 24px;
 }
 
 /*-------------------
@@ -373,7 +378,7 @@ h4 {
 }
 
 .monuments__card {
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.25);
+  box-shadow: var(--card-box-shadow);
   border-radius: var(--radius);
   position: relative;
   overflow: hidden;
@@ -442,16 +447,16 @@ h4 {
 }
 
 .benefits__card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 24px;
+  display: flex;
+  gap: 22px;
   padding-top: 65px;
 }
 
 .benefits__card {
+  flex: 1;
   border-radius: var(--radius);
   border: 1px solid #AEAEAE;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15), inset 0 1px 4px 0 rgba(0,0,0,0.15);
+  box-shadow: var(--card-box-shadow), inset var(--card-box-shadow);
   padding: 31px 32px 21px;
   position: relative;
   z-index: 5;
@@ -540,7 +545,6 @@ h4 {
   margin-right: 83px;
   padding: 65px 444px 60px 90px;
   border-radius: var(--radius);
-  /* overflow: hidden; */
   background-image: linear-gradient(90deg, rgba(49,48,51,1) 0%, rgba(49,48,51,1) 50%, rgba(63,60,69,1) 100%);
   position: relative;
 }
@@ -585,4 +589,60 @@ h4 {
 .benefits__text {
   position: relative;
   z-index: 5;
+}
+
+/*-------------------
+--------stages-------
+-------------------*/
+
+.stages {
+  padding: 100px 0 20px;
+}
+
+.stages h2 {
+  margin-bottom: 30px;
+}
+
+.stages__description {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 30px;
+}
+
+.stages__description p {
+  font-family: var(--inter-font);
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 10px;
+  color: #3C3C3C;
+}
+
+.stages__description p:first-child {
+  padding: 0;
+}
+
+.stages__card-list {
+  display: flex;
+  gap: 24px;
+}
+
+.stages__card {
+  flex: 1;
+  border-radius: var(--radius);
+  box-shadow: var(--card-box-shadow);
+  background-image: url("../img/card-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  text-align: center;
+  gap: 30px;
+}
+
+.stages__card p {
+  color: #3C3C3C;
+  font-size: 18px;
+  margin-top: 5px;
 }
