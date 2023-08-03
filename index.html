@@ -8,12 +8,32 @@
     <title>Черный камень</title>
   </head>
   <body>
+    <div class="popup-call popup" id="call-form" style="display: none;">
+      <div class="popup__overlay"></div>
+      <div class="popup__wrapper">
+          <div class="popup__close">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.10764 0.715836C1.49328 0.320491 2.12249 0.316583 2.51301 0.707107L24.2626 22.4567C24.6532 22.8473 24.6571 23.4843 24.2715 23.8797L23.8622 24.2993C23.4765 24.6947 22.8473 24.6986 22.4568 24.308L0.707148 2.55841C0.316624 2.16788 0.312667 1.53081 0.69831 1.13546L1.10764 0.715836Z" fill="#7C7C7C"/>
+              <path d="M23.8622 0.715836C23.4766 0.320491 22.8474 0.316583 22.4568 0.707107L0.707204 22.4567C0.31668 22.8473 0.312723 23.4843 0.698366 23.8797L1.1077 24.2993C1.49334 24.6947 2.12255 24.6986 2.51307 24.308L24.2627 2.55841C24.6532 2.16788 24.6572 1.53081 24.2715 1.13546L23.8622 0.715836Z" fill="#7C7C7C"/>
+            </svg>
+          </div>
+          <form action="" method="post" id="callForm">
+              <legend class="legend">Оставьте ваш номер телефона и мы свяжемся с вами в ближайшее время</legend>
+              <div class="popup__inputs-wrapper">
+                <input id="popup-name" placeholder="Ваше имя" type="text" class="input popup_input">
+                <input id="popup-telephone" placeholder="+375 (ХХ) ХХХ-ХХ-ХХ" type="tel" class="input">
+                <p class="popup__agreement-text">Нажимая «Отправить», вы соглашаетесь с Политикой обработки персональных данных</p>
+              </div>
+              <button type="submit" class="btn popup__btn">Заказать звонок</button>
+          </form>
+      </div>
+    </div>
     <header class="header">
         <div class="header__wrapper container">
           <nav>
             <ul class="header__nav-list">
               <li>
-                <a href="#about" class="header__nav-link">О компании</a>
+                <a href="#about" class="header__nav-link">О компании</a>
               </li>
               <li>
                 <a href="#services" class="header__nav-link">Наши услуги</a>
@@ -354,10 +374,10 @@
       <div class="container">
         <div class="footer__wrapper">
           <form action="" method="post">
-            <legend class="footer__legend">Остались вопросы? Свяжитесь с нашим специалистом</legend>
+            <legend class="legend">Остались вопросы? Свяжитесь с нашим специалистом</legend>
             <div class="footer__inputs-wrapper">
-              <input id="name" placeholder="Ваше имя" type="text" class="footer__input">
-              <input id="telephone" placeholder="+375 (ХХ) ХХХ-ХХ-ХХ" type="tel" class="footer__input">
+              <input id="name" placeholder="Ваше имя" type="text" class="input">
+              <input id="telephone" placeholder="+375 (ХХ) ХХХ-ХХ-ХХ" type="tel" class="input">
             </div>
             <p class="footer__agreement-text">Нажимая «Отправить», вы соглашаетесь с Политикой обработки персональных данных</p>
             <button type="submit" class="btn footer__btn">Заказать звонок</button>
@@ -413,6 +433,7 @@
         <p class="footer__artcly">Создание сайта: ArtCly.by</p>
       </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
