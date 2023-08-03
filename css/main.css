@@ -652,7 +652,7 @@ h5 {
 -------------------*/
 
 .works {
-  padding: 100px 0 20px;
+  padding: 100px 0 120px;
   position: relative;
 }
 
@@ -715,4 +715,113 @@ h5 {
 
 .swiper-button-prev svg {
   transform: rotate(180deg);
+}
+
+/*-------------------
+--------footer-------
+-------------------*/
+
+.footer {
+  background-color: #252121;
+  padding: 90px 0 58px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__legend {
+  font-family: var(--georgia-font);
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--text-color-white);
+}
+
+.footer__inputs-wrapper {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.footer__input {
+  width: 238px;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #AEAEAE;
+  padding: 10px 0;
+  color: var(--text-color-white);
+  font-size: 18px;
+}
+
+.footer__input::placeholder {
+  font-size: 18px;
+  color: #AEAEAE;
+}
+
+.footer__agreement-text {
+  color: #AEAEAE;
+  margin-top: 20px;
+}
+
+.footer__btn {
+  margin-top: 40px;
+  background-color: transparent;
+  border: 1px solid #86A959;
+  padding: 20px 68px;
+}
+
+.footer__contacts {
+  color: var(--text-color-white);
+  max-width: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+}
+
+.footer__phone-wrapper {
+  font-family: var(--georgia-font);
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__icon {
+  width: 25px;
+}
+
+.footer__contacts-text {
+  font-weight: 400;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.footer__working-hourse {
+  font-family: var(--georgia-font);
+  margin-top: 16px;
+}
+
+.footer__email {
+  margin-top: 40px;
+}
+
+.footer__address {
+  margin-top: 16px;
+}
+
+.footer__address p {
+  max-width: 252px;
+}
+
+.footer__artcly {
+  text-align: center;
+  color: var(--text-color-white);
+  margin-top: 50px;
 }
