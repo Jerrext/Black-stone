@@ -1,8 +1,34 @@
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+var swiper2 = new Swiper(".swiper1", {
+  slidesPerView: 1.3,
+  spaceBetween: 25,
   grid: {
-    rows: 2,
+    rows: 1,
   },
+  keyboard: {
+    enabled: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 2.2,
+    },
+    700: {
+      slidesPerView: 3.2,
+    },
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+      grid: {
+        rows: 2,
+      },
+    },
+  }
+});
+
+var swiper = new Swiper(".swiper2", {
+  slidesPerView: 1,
   spaceBetween: 24,
   autoplay: {
     delay: 5000,
@@ -15,23 +41,17 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   // simulateTouch: false,
-  // breakpoints: {
-  //   // when window width is >= 320px
-  //   320: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20
-  //   },
-  //   // when window width is >= 480px
-  //   480: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30
-  //   },
-  //   // when window width is >= 640px
-  //   640: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40
-  //   }
-  // }
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+      },
+    },
+  }
 });
 
 const overflowToggle = (arg) => {
@@ -67,6 +87,8 @@ const popUpClose = () => {
   overflowToggle(true)
 }
 
-document.querySelector(".header__call-btn").addEventListener("click", callBtnHandler)
+document.querySelectorAll(".btn-call").forEach(item => {
+  item.addEventListener("click", callBtnHandler)
+})
 document.querySelector(".popup__close").addEventListener("click", popUpClose)
 document.querySelector(".popup__overlay").addEventListener("click", popUpClose)

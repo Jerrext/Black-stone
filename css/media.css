@@ -1,0 +1,432 @@
+@media screen and (max-width: 1400px) {
+  :root {
+    font-size: 9px;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+
+  .services__card p {
+    font-size: 2rem;
+  }
+
+  .monuments__card-list {
+    grid-gap: 20px;
+  }
+
+  .monuments-swiper {
+    height: 880px;
+  }
+
+  .monuments__card-title {
+    padding: 20px 30px 30px;
+  }
+
+  .monuments__card-btn {
+    width: 200px;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  :root {
+    font-size: 8px;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  .services__card svg {
+    min-width: 60px;
+    height: 60px;
+  }
+
+  .monuments__card-list {
+    grid-gap: 20px;
+  }
+
+  .benefits__info {
+    padding-right: 400px;
+  }
+
+  .benefits__info::after {
+    top: 45%;
+    transform: scale(0.9) translateY(-50%); 
+    right: -110px;
+  }
+
+  .swiper-btn-wrapper {
+    top: 20px;
+  }
+
+  .monuments-swiper {
+    height: 820px;
+  }
+
+  .monuments__card-btn {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  .banner {
+    padding-bottom: 15rem;
+  }
+
+  .banner__address {
+    font-size: 2.4rem;
+  }
+
+  .banner__text {
+    gap: 4rem;
+  }
+
+  .benefits__card-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 75px 22px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 7px;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  .services__card-list {
+    flex-wrap: wrap;
+  }
+
+  .services__card {
+    min-width: 300px;
+    min-height: 110px;
+  }
+
+  .monuments-swiper {
+    height: 300px;
+  }
+  
+  .monuments__card {
+    height: 100% !important;
+  }
+
+  .benefits__info {
+    padding: 6rem 9rem 280px;
+    margin-right: 0;
+  }
+
+  .benefits__info::after {
+    top: unset;
+    right: unset;
+    left: 50%;
+    bottom: -120px;
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  .stages {
+    padding-top: 16rem;
+  }
+
+  .stages__card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stages__card {
+    padding: 15px;
+  }
+
+  .swiper-btn-wrapper {
+    top: 15px;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .footer__wrapper form {
+    text-align: center;
+  }
+
+  .footer__inputs-wrapper {
+    justify-content: center;
+  }
+
+  .footer__contacts {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    align-items: center;
+    max-width: unset;
+  }
+
+  .footer__contacts-text {
+    align-items: center;
+  }
+
+  .footer__working-hourse,
+  .footer__email,
+  .footer__address {
+    margin: 0;
+  }
+  
+  .footer__address {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  .footer__contacts-text {
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  h3,
+  .legend {
+    font-size: 18px;
+  }
+
+  .header {
+    padding-top: 20px;
+  }
+
+  .banner {
+    padding-top: 24rem;
+  }
+
+  .banner__address {
+    font-size: 16px;
+  }
+
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__img-wrapper {
+    order: -1;
+    height: 200px;
+  }
+
+  .about__description p,
+  .benefits__text p,
+  .stages__description p,
+  .btn, h5, h4,
+  .input,
+  .input::placeholder {
+    font-size: 14px;
+  }
+
+  .stages__card-text p,
+  .footer__agreement-text,
+  .popup__agreement-text {
+    font-size: 12px;
+  }
+
+  .about,
+  .services,
+  .monuments,
+  .benefits {
+    padding: 40px 0 20px;
+  }
+
+  .stages {
+    padding: 80px 0 20px;
+  }
+
+  .works {
+    padding: 40px 0 100px;
+  }
+
+  .footer__artcly {
+    font-size: 10px;
+  }
+
+  .works-swiper .swiper-slide:nth-child(4n + 4),
+  .works-swiper .swiper-slide:nth-child(4n + 5),
+  .works-swiper .swiper-slide:nth-child(1) {
+    height: 100% !important;
+  }
+
+  .works-swiper .swiper-slide:nth-child(4n + 2),
+  .works-swiper .swiper-slide:nth-child(4n + 3) {
+    height: 100% !important;
+  }
+
+  .works-swiper {
+    height: 222px;
+  }
+
+  .swiper-controls {
+    position: static;
+  }
+
+  .swiper-btn-wrapper {
+    top: unset;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+  }
+  
+  .works__wrapper {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .benefits__card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits__card {
+    padding: 22px 30px;
+  }
+
+  .benefits__info {
+    padding: 30px 10px 280px;
+  }
+
+  .footer__contacts {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .footer__address {
+    grid-row: unset;
+    grid-column: unset;
+  }
+
+  .footer__wrapper form {
+    text-align: left;
+  }
+
+  .footer__inputs-wrapper {
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .footer__btn {
+    margin-top: 20px;
+  }
+
+  .footer {
+    padding: 36px 0 21px;
+  }
+
+  .footer .input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .header__phone-num {
+    font-size: 22px;
+  }
+  
+  .header__wrapper {
+    gap: 20px;
+  }
+
+  .burger-btn {
+    transform: scale(1) translateY(8px);
+  }
+
+  .banner {
+    padding: 151px 0 265px;
+  }
+
+  .banner .btn {
+    width: 100%;
+  }
+
+  .banner__text {
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+
+  .stages__card-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits__info::after {
+    bottom: -155px;
+    transform: translateX(-50%) scale(0.5);
+  }
+
+  .benefits__info {
+    padding-bottom: 190px;
+  } 
+
+  .popup-input {
+    width: 100%;
+  }
+
+  .popup__agreement-text {
+    text-align: left;
+    max-width: unset;
+  }
+
+  .popup__btn {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner {
+    background-image: url("../img/banner-bg2.png");
+    background-position: bottom;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about {
+    margin-top: -70px;
+    padding-top: 100px;
+  }
+}

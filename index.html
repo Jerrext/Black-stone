@@ -4,33 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>Черный камень</title>
   </head>
   <body>
-    <div class="popup-call popup" id="call-form" style="display: none;">
-      <div class="popup__overlay"></div>
-      <div class="popup__wrapper">
-          <div class="popup__close">
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.10764 0.715836C1.49328 0.320491 2.12249 0.316583 2.51301 0.707107L24.2626 22.4567C24.6532 22.8473 24.6571 23.4843 24.2715 23.8797L23.8622 24.2993C23.4765 24.6947 22.8473 24.6986 22.4568 24.308L0.707148 2.55841C0.316624 2.16788 0.312667 1.53081 0.69831 1.13546L1.10764 0.715836Z" fill="#7C7C7C"/>
-              <path d="M23.8622 0.715836C23.4766 0.320491 22.8474 0.316583 22.4568 0.707107L0.707204 22.4567C0.31668 22.8473 0.312723 23.4843 0.698366 23.8797L1.1077 24.2993C1.49334 24.6947 2.12255 24.6986 2.51307 24.308L24.2627 2.55841C24.6532 2.16788 24.6572 1.53081 24.2715 1.13546L23.8622 0.715836Z" fill="#7C7C7C"/>
-            </svg>
-          </div>
-          <form action="" method="post" id="callForm">
-              <legend class="legend">Оставьте ваш номер телефона и мы свяжемся с вами в ближайшее время</legend>
-              <div class="popup__inputs-wrapper">
-                <input id="popup-name" placeholder="Ваше имя" type="text" class="input popup_input">
-                <input id="popup-telephone" placeholder="+375 (ХХ) ХХХ-ХХ-ХХ" type="tel" class="input">
-                <p class="popup__agreement-text">Нажимая «Отправить», вы соглашаетесь с Политикой обработки персональных данных</p>
-              </div>
-              <button type="submit" class="btn popup__btn">Заказать звонок</button>
-          </form>
-      </div>
-    </div>
     <header class="header">
         <div class="header__wrapper container">
-          <nav>
+          <nav class="header__navigation">
             <ul class="header__nav-list">
               <li>
                 <a href="#about" class="header__nav-link">О компании</a>
@@ -52,16 +33,65 @@
               </li>
             </ul>
           </nav>
+          <div class="burger-btn">
+            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1C0 0.447716 0.447715 0 1 0H23C23.5523 0 24 0.447715 24 1V1.66667C24 2.21895 23.5523 2.66667 23 2.66667H1C0.447716 2.66667 0 2.21895 0 1.66667V1ZM0 7.66667C0 7.11438 0.447715 6.66667 1 6.66667H23C23.5523 6.66667 24 7.11438 24 7.66667V8.33333C24 8.88562 23.5523 9.33333 23 9.33333H1C0.447716 9.33333 0 8.88562 0 8.33333V7.66667ZM0 14.3333C0 13.781 0.447715 13.3333 1 13.3333H23C23.5523 13.3333 24 13.781 24 14.3333V15C24 15.5523 23.5523 16 23 16H1C0.447716 16 0 15.5523 0 15V14.3333Z" fill="white"/>
+            </svg>              
+          </div>
+          <div class="burger-menu">
+            <nav>
+              <ul class="header__nav-list">
+                <li>
+                  <a href="#about" class="header__nav-link">О компании</a>
+                </li>
+                <li>
+                  <a href="#services" class="header__nav-link">Наши услуги</a>
+                </li>
+                <li>
+                  <a href="#monuments" class="header__nav-link">Варианты памятников</a>
+                </li>
+                <li>
+                  <a href="#benefits" class="header__nav-link">Преимущества</a>
+                </li>
+                <li>
+                  <a href="#stages" class="header__nav-link">Как мы работаем</a>
+                </li>
+                <li>
+                  <a href="#works" class="header__nav-link">Наши работы</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div class="header__phone">
             <div class="header__phone-wrapper">
               <a class="header__phone-num" href="tel:+375159224849">+375 (15) 922–48–49</a>
               <a class="header__phone-num" href="tel:+375296686419">+375 (29) 668–64–19</a>
             </div>
-            <button class="header__call-btn">Заказать звонок</button>
+            <button class="header__call-btn btn-call">Заказать звонок</button>
           </div>
         </div>
     </header>
     <main>
+      <div class="popup-call popup" id="call-form" style="display: none;">
+        <div class="popup__overlay"></div>
+        <div class="popup__wrapper">
+            <div class="popup__close">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.10764 0.715836C1.49328 0.320491 2.12249 0.316583 2.51301 0.707107L24.2626 22.4567C24.6532 22.8473 24.6571 23.4843 24.2715 23.8797L23.8622 24.2993C23.4765 24.6947 22.8473 24.6986 22.4568 24.308L0.707148 2.55841C0.316624 2.16788 0.312667 1.53081 0.69831 1.13546L1.10764 0.715836Z" fill="#7C7C7C"/>
+                <path d="M23.8622 0.715836C23.4766 0.320491 22.8474 0.316583 22.4568 0.707107L0.707204 22.4567C0.31668 22.8473 0.312723 23.4843 0.698366 23.8797L1.1077 24.2993C1.49334 24.6947 2.12255 24.6986 2.51307 24.308L24.2627 2.55841C24.6532 2.16788 24.6572 1.53081 24.2715 1.13546L23.8622 0.715836Z" fill="#7C7C7C"/>
+              </svg>
+            </div>
+            <form action="" method="post" id="callForm">
+                <legend class="legend">Оставьте ваш номер телефона и мы свяжемся с вами в ближайшее время</legend>
+                <div class="popup__inputs-wrapper">
+                  <input id="popup-name" placeholder="Ваше имя" type="text" class="input popup-input">
+                  <input id="popup-telephone" placeholder="+375 (ХХ) ХХХ-ХХ-ХХ" type="tel" class="input popup-input">
+                  <p class="popup__agreement-text">Нажимая «Отправить», вы соглашаетесь с Политикой обработки персональных данных</p>
+                </div>
+                <button type="submit" class="btn popup__btn">Заказать звонок</button>
+            </form>
+        </div>
+      </div>
       <section class="banner" id="banner">
         <div class="container">
           <div class="banner__text">
@@ -69,7 +99,7 @@
             <h1>Изготовление памятников из гранита любых форм и размеров</h1>
             <p class="banner__address">В Гродненской и Минской области, Литве</p>
           </div>
-          <button class="btn">Получить консультацию</button>
+          <button class="btn btn-call">Получить консультацию</button>
         </div>
       </section>
       <section class="about" id="about">
@@ -137,79 +167,81 @@
       <section class="monuments" id="monuments">
         <div class="container">
           <h2>Варианты памятников</h2>
-          <div class="monuments__card-list">
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p1.jpg" alt="Эконом гранит">
+          <div class="monuments-swiper swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p1.jpg" alt="Эконом гранит">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Эконом гранит</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <div class="monuments__card-title">
-                <h3>Эконом гранит</h3>
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p5.jpg" alt="Двойной Стандарт">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Двойной Стандарт</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p2.jpg" alt="Стандарт гранит">
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p2.jpg" alt="Стандарт гранит">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Стандарт гранит</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <div class="monuments__card-title">
-                <h3>Стандарт гранит</h3>
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p6.jpg" alt="Двойной Вип">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Двойной Вип</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p3.jpg" alt="Вип гранит">
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p3.jpg" alt="Вип гранит">
+                </div>
+                <div class="monuments__card-title btn-call">
+                  <h3>Вип гранит</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <div class="monuments__card-title">
-                <h3>Вип гранит</h3>
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p7.jpg" alt="Ограда гранит">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Ограда гранит</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p4.jpg" alt="Красный гранит">
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p4.jpg" alt="Красный гранит">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Красный гранит</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <div class="monuments__card-title">
-                <h3>Красный гранит</h3>
+              <div class="swiper-slide monuments__card">
+                <div class="monuments__card-img-wrapper">
+                  <img src="./img/p8.jpg" alt="Стол и скамья">
+                </div>
+                <div class="monuments__card-title">
+                  <h3>Стол и скамья</h3>
+                </div>
+                <button class="btn monuments__card-btn btn-call">Уточнить цену</button>
               </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p5.jpg" alt="Двойной Стандарт">
-              </div>
-              <div class="monuments__card-title">
-                <h3>Двойной Стандарт</h3>
-              </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p6.jpg" alt="Двойной Вип">
-              </div>
-              <div class="monuments__card-title">
-                <h3>Двойной Вип</h3>
-              </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p7.jpg" alt="Ограда гранит">
-              </div>
-              <div class="monuments__card-title">
-                <h3>Ограда гранит</h3>
-              </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
-            <article class="monuments__card">
-              <div class="monuments__card-img-wrapper">
-                <img src="./img/p8.jpg" alt="Стол и скамья">
-              </div>
-              <div class="monuments__card-title">
-                <h3>Стол и скамья</h3>
-              </div>
-              <button class="btn monuments__card-btn">Уточнить цену</button>
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -312,8 +344,28 @@
       <section class="works" id="works">
         <div class="container">
           <div class="works__wrapper">
-            <h2>Наши работы</h2>
-            <div class="swiper mySwiper">
+            <div class="works__header">
+              <h2>Наши работы</h2>
+              <div class="swiper-controls">
+                <div class="swiper-btn-wrapper">
+                  <div class="swiper-button-next">
+                    <button>
+                      <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#286A1D"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <button>
+                      <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#286A1D"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="works-swiper swiper2">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="./img/w1.jpg" alt="">
@@ -347,22 +399,6 @@
                 </div>
                 <div class="swiper-slide">
                   <img src="./img/w11.jpg" alt="">
-                </div>
-              </div>
-              <div class="swiper-btn-wrapper">
-                <div class="swiper-button-next">
-                  <button>
-                    <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#286A1D"/>
-                    </svg>
-                  </button>
-                </div>
-                <div class="swiper-button-prev">
-                  <button>
-                    <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#286A1D"/>
-                    </svg>
-                  </button>
                 </div>
               </div>
             </div>
@@ -433,7 +469,6 @@
         <p class="footer__artcly">Создание сайта: ArtCly.by</p>
       </div>
     </footer>
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
