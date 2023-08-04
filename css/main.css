@@ -16,11 +16,11 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/FONTSPRINGDEMO-ProximaNovaCondRegular.eot');
-  src: url('../fonts/FONTSPRINGDEMO-ProximaNovaCondRegular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/FONTSPRINGDEMO-ProximaNovaCondRegular.woff2') format('woff2'),
-      url('../fonts/FONTSPRINGDEMO-ProximaNovaCondRegular.woff') format('woff'),
-      url('../fonts/FONTSPRINGDEMO-ProximaNovaCondRegular.ttf') format('truetype');
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+      url('../fonts/ProximaNova-Regular.woff') format('woff'),
+      url('../fonts/ProximaNova-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,11 +28,11 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('../fonts/FONTSPRINGDEMO-ProximaNovaExCnBold.eot');
-  src: url('../fonts/FONTSPRINGDEMO-ProximaNovaExCnBold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/FONTSPRINGDEMO-ProximaNovaExCnBold.woff2') format('woff2'),
-      url('../fonts/FONTSPRINGDEMO-ProximaNovaExCnBold.woff') format('woff'),
-      url('../fonts/FONTSPRINGDEMO-ProximaNovaExCnBold.ttf') format('truetype');
+  src: url('../fonts/ProximaNova-Bold.eot');
+  src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+      url('../fonts/ProximaNova-Bold.woff') format('woff'),
+      url('../fonts/ProximaNova-Bold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -945,6 +945,7 @@ h5 {
 -------------------*/
 
 .popup {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -1028,4 +1029,21 @@ h5 {
 .popup__btn {
   margin-top: 45px;
   padding: 20px 68px;
+}
+
+.popup-view__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  max-width: 80vw;
+  border: 10px solid #fff;
+  border-radius: 10px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.popup-view__close {
+  opacity: 0.5;
 }

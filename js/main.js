@@ -40,7 +40,6 @@ var swiper = new Swiper(".swiper2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // simulateTouch: false,
   breakpoints: {
     500: {
       slidesPerView: 2,
@@ -54,6 +53,18 @@ var swiper = new Swiper(".swiper2", {
   }
 });
 
+const popupView = document.querySelector(".popup-view")
+const popupViewImg = document.querySelector(".popup-view__img")
+const overlayView = document.querySelector(".popup-view__overlay")
+
+const popupCall = document.querySelector(".popup-call")
+const popupCallWrapper = document.querySelector(".popup-call__wrapper")
+const overlayCall = document.querySelector(".popup-call__overlay")
+
+const burger = document.querySelector(".burger")
+const burgerMenu = document.querySelector(".burger-menu")
+const burgerOverlay = document.querySelector(".burger__overlay")
+
 const overflowToggle = (arg) => {
   if (arg) {
     document.documentElement.style.overflow = "hidden auto"
@@ -64,34 +75,35 @@ const overflowToggle = (arg) => {
   }
 }
 
-const popup = document.querySelector(".popup-call")
-const popupWrapper = document.querySelector(".popup__wrapper")
-const overlay = document.querySelector(".popup__overlay")
-
-const callBtnHandler = () => {
+const popUpOpen = (window, wrapper, overlay) => {
   overflowToggle(false)
-  popup.style.display = "block"
+  window.style.display = "block"
 
   setTimeout(() => {
     overlay.style.opacity = ".5"
-    popupWrapper.style.opacity = "1"
-    popupWrapper.style.top = "50%"
+    wrapper.style.opacity = "1"
+    wrapper.style.top = "50%"
   },0)
 }
 
-const popUpClose = () => {
-  popup.style.display = "none"
-  overlay.style.opacity = "0"
-  popupWrapper.style.opacity = "0"
-  popupWrapper.style.top = "calc(50% + 30px)"
+const popUpClose = (window, wrapper, overlay) => {
+  window.style.display = ""
+  overlay.style.opacity = ""
+  wrapper.style.opacity = ""
+  wrapper.style.top = ""
+
   overflowToggle(true)
 }
 
+const setPopUpVisibility = (visibility, window, wrapper, overlay) => {
+  if (visibility) {
+    popUpOpen(window, wrapper, overlay)
+  } else {
+    popUpClose(window, wrapper, overlay)
+  }
+}
+
 const burgerMenuClose = () => {
-  const burger = document.querySelector(".burger")
-  const burgerMenu = document.querySelector(".burger-menu")
-  const burgerOverlay = document.querySelector(".burger__overlay")
-  
   burgerMenu.style.left = ""
   burgerOverlay.style.opacity = ""
 
@@ -103,10 +115,6 @@ const burgerMenuClose = () => {
 }
 
 const burgerMenuOpen = () => {
-  const burger = document.querySelector(".burger")
-  const burgerMenu = document.querySelector(".burger-menu")
-  const burgerOverlay = document.querySelector(".burger__overlay")
-
   burger.style.display = "block"
 
   setTimeout(() => {
@@ -118,13 +126,23 @@ const burgerMenuOpen = () => {
 }
 
 document.querySelectorAll(".btn-call").forEach(item => {
-  item.addEventListener("click", callBtnHandler)
+  item.addEventListener("click", () => setPopUpVisibility(true, popupCall, popupCallWrapper, overlayCall))
 })
-document.querySelector(".popup__close").addEventListener("click", popUpClose)
-document.querySelector(".popup__overlay").addEventListener("click", popUpClose)
+document.querySelector(".popup-call__close").addEventListener("click", () => setPopUpVisibility(false, popupCall, popupCallWrapper, overlayCall))
+document.querySelector(".popup-view__close").addEventListener("click", () => setPopUpVisibility(false, popupView, popupViewImg, overlayView))
+overlayCall.addEventListener("click", () => setPopUpVisibility(false, popupCall, popupCallWrapper, overlayCall))
+overlayView.addEventListener("click", () => setPopUpVisibility(false, popupView, popupViewImg, overlayView))
 document.querySelector(".burger-btn").addEventListener("click", burgerMenuOpen)
 document.querySelector(".burger-menu__close-btn").addEventListener("click", burgerMenuClose)
 document.querySelectorAll(".burger__nav-link").forEach(item => {
   item.addEventListener("click", burgerMenuClose)
 })
 document.querySelector(".burger__overlay").addEventListener("click", burgerMenuClose)
+document.querySelectorAll(".works-swiper .swiper-slide").forEach(item => {
+  item.addEventListener("click", () => {
+    const imgSrs = item.firstElementChild.src
+    const img = document.querySelector(".popup-view__img")
+    img.src = imgSrs
+    setPopUpVisibility(true, popupView, popupViewImg, overlayView)
+  })
+})
