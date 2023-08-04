@@ -87,8 +87,44 @@ const popUpClose = () => {
   overflowToggle(true)
 }
 
+const burgerMenuClose = () => {
+  const burger = document.querySelector(".burger")
+  const burgerMenu = document.querySelector(".burger-menu")
+  const burgerOverlay = document.querySelector(".burger__overlay")
+  
+  burgerMenu.style.left = ""
+  burgerOverlay.style.opacity = ""
+
+  setTimeout(() => {
+    burger.style.display = ""
+  }, 500);
+  
+  overflowToggle(true)
+}
+
+const burgerMenuOpen = () => {
+  const burger = document.querySelector(".burger")
+  const burgerMenu = document.querySelector(".burger-menu")
+  const burgerOverlay = document.querySelector(".burger__overlay")
+
+  burger.style.display = "block"
+
+  setTimeout(() => {
+    burgerMenu.style.left = "0"
+    burgerOverlay.style.opacity = "0.5"
+  }, 0);
+
+  overflowToggle(false)
+}
+
 document.querySelectorAll(".btn-call").forEach(item => {
   item.addEventListener("click", callBtnHandler)
 })
 document.querySelector(".popup__close").addEventListener("click", popUpClose)
 document.querySelector(".popup__overlay").addEventListener("click", popUpClose)
+document.querySelector(".burger-btn").addEventListener("click", burgerMenuOpen)
+document.querySelector(".burger-menu__close-btn").addEventListener("click", burgerMenuClose)
+document.querySelectorAll(".burger__nav-link").forEach(item => {
+  item.addEventListener("click", burgerMenuClose)
+})
+document.querySelector(".burger__overlay").addEventListener("click", burgerMenuClose)
